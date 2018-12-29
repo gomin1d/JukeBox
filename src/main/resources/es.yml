@@ -1,0 +1,26 @@
+NEXT_PAGE: §bSiguiente página
+LATER_PAGE: §bPagina anterior
+PLAYER: §cDebes ser un jugador para poner ese comando.
+RELOAD_MUSIC: §aMúsica recargada.
+INV_NAME: §d§lMúsica !
+TOGGLE_PLAYING: §6Pausar/Reproducir
+VOLUME: '§9Volumen de la música : §b'
+RIGHT_CLICK: '§eClick derecho: disminuir por 10%'
+LEFT_CLICK: '§eClick izquierdo: aumentar por 10%'
+RANDOM_MUSIC: §3Música aleatoria
+STOP: §cParar la música
+MUSIC_STOPPED: §aMúsica parada.
+ENABLE: Activar
+DISABLE: Desactivar
+SHUFFLE_MODE: modo aleatorio
+CONNEXION_MUSIC: música cuando se conecta
+MUSIC_PLAYING: '§aCancion actual:'
+INCORRECT_SYNTAX: §cSintaxis incorrecta.
+RELOAD_LAUNCH: §aRecargando el plugin.
+RELOAD_FINISH: §aPlugin recargado.
+AVAILABLE_COMMANDS: '§aComandos disponibles:'
+INVALID_NUMBER: §cNúmero invalido.
+PLAYER_MUSIC_STOPPED: '§aLa música se detuvo para el jugador: §b'
+IN_PLAYLIST: §9§oEn la lista de reproducción
+PARTICLES: particles
+# Traducido por OsorioSlayer y Elguerrero

@@ -1,0 +1,23 @@
+NEXT_PAGE: §b下一页
+LATER_PAGE: §b上一页
+PLAYER: §cYou must be a player to do this command.
+RELOAD_MUSIC: §a随身听 重新载入.
+INV_NAME: §d§l随身听 !
+TOGGLE_PLAYING: §6暂停/播放
+VOLUME: '§9当前音量 : §b'
+RIGHT_CLICK: §e右击：减少10%音量
+LEFT_CLICK: §e点击：增加10%音量
+RANDOM_MUSIC: §3随机音乐
+STOP: §c停止音乐
+MUSIC_STOPPED: §a你停止播放音乐.
+ENABLE: 开启
+DISABLE: 关闭
+SHUFFLE_MODE: 登入游戏时播放音乐
+CONNEXION_MUSIC: 随机播放模式
+MUSIC_PLAYING: '§a正在播放:'
+INCORRECT_SYNTAX: §cIncorrect syntax.
+RELOAD_LAUNCH: §aTrying to reload.
+RELOAD_FINISH: §aReload finished.
+AVAILABLE_COMMANDS: '§aAvailable commands:'
+INVALID_NUMBER: §cInvalid number.
+# Translated by Mr_Liu
