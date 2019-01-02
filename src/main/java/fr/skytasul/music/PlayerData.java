@@ -26,7 +26,7 @@ public class PlayerData implements Listener {
     private UUID id;
     private boolean join = false;
     private boolean shuffle = false;
-    private int volume = 100;
+    private int volume = 20;
     private boolean particles = true;
     private ArrayList<Song> playlist = new ArrayList();
     private ArrayList<Song> favorites = new ArrayList();
