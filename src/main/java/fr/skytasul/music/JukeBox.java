@@ -166,6 +166,7 @@ public class JukeBox extends JavaPlugin implements Listener {
         this.getCommand("music").setExecutor(new CommandMusic());
         this.getCommand("adminmusic").setExecutor(new CommandAdmin());
         this.getServer().getPluginManager().registerEvents(this, this);
+        this.getServer().getPluginManager().registerEvents(new Events(), this);
     }
 
     private void loadDatas() {

@@ -72,7 +72,6 @@ public class JukeBoxInventory implements Listener {
 
     public JukeBoxInventory(Player p) {
         this.menu = JukeBoxInventory.ItemsMenu.DEFAULT;
-        Bukkit.getPluginManager().registerEvents(this, JukeBox.getInstance());
         this.id = p.getUniqueId();
         this.pdata = (PlayerData)PlayerData.players.get(p.getUniqueId());
         this.pdata.linked = this;
@@ -162,8 +161,7 @@ public class JukeBoxInventory implements Listener {
         return this.id;
     }
 
-    @EventHandler
-    public void onClick(InventoryClickEvent e) {
+    public void checkClick(InventoryClickEvent e) {
         Player p = (Player)e.getWhoClicked();
         if (e.getClickedInventory() == this.inv) {
             if (e.getCurrentItem() != null) {

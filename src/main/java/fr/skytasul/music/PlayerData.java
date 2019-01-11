@@ -5,6 +5,7 @@
 
 package fr.skytasul.music;
 
+import com.xxmicloxx.NoteBlockAPI.NoteBlockAPI;
 import com.xxmicloxx.NoteBlockAPI.event.SongDestroyingEvent;
 import com.xxmicloxx.NoteBlockAPI.Song;
 import fr.skytasul.music.utils.CustomSongPlayer;
@@ -41,7 +42,6 @@ public class PlayerData implements Listener {
         this.playlistIndex = 0;
         this.linked = null;
         this.id = id;
-        Bukkit.getPluginManager().registerEvents(this, JukeBox.getInstance());
     }
 
     public Song playSong(Song song) {
@@ -126,9 +126,9 @@ public class PlayerData implements Listener {
         }
     }
 
-    @EventHandler
-    public void onSongDestroy(SongDestroyingEvent e) {
-        if (e.getSongPlayer() == this.songPlayer) {
+    public void checkSongDestroy(SongDestroyingEvent e) {
+        if (e.getSongPlayer() == this.songPlayer
+                && Bukkit.getPlayer(id) != null /* is online */) {
             Song toListen = null;
             List<Song> playlist = this.getPlaylistSongs();
             if (!playlist.isEmpty()) {
@@ -154,8 +154,7 @@ public class PlayerData implements Listener {
 
     }
 
-    @EventHandler
-    public void onLeave(PlayerQuitEvent e) {
+    public void checkLeave(PlayerQuitEvent e) {
         Player p = e.getPlayer();
         if (p.getUniqueId().equals(this.id)) {
             if (this.songPlayer != null) {
