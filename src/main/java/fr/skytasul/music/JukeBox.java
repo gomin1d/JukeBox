@@ -316,10 +316,7 @@ public class JukeBox extends JavaPlugin implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onQuit(PlayerQuitEvent event) {
-        PlayerData playerData = PlayerData.players.get(event.getPlayer().getUniqueId());
-        if (playerData != null) {
-            playerData.setP(null);
-        }
+        PlayerData.players.remove(event.getPlayer().getUniqueId());
     }
 
     @EventHandler
