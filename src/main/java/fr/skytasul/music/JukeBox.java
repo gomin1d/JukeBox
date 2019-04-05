@@ -33,11 +33,13 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
@@ -310,6 +312,14 @@ public class JukeBox extends JavaPlugin implements Listener {
         }
 
         pdata.playerJoin(p, worlds ? worldsEnabled.contains(p.getWorld()) : true);
+    }
+
+    @EventHandler(priority = EventPriority.MONITOR)
+    public void onQuit(PlayerQuitEvent event) {
+        PlayerData playerData = PlayerData.players.get(event.getPlayer().getUniqueId());
+        if (playerData != null) {
+            playerData.setP(null);
+        }
     }
 
     @EventHandler

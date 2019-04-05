@@ -126,6 +126,10 @@ public class PlayerData implements Listener {
         }
     }
 
+    public void setP(Player p) {
+        this.p = p;
+    }
+
     public void checkSongDestroy(SongDestroyingEvent e) {
         if (e.getSongPlayer() == this.songPlayer
                 && Bukkit.getPlayer(id) != null /* is online */) {
